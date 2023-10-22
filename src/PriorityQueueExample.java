@@ -12,7 +12,8 @@ import java.io.*;
 public class PriorityQueueExample {
     public static void main(String[] args) {
         // default: min heap
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        // Return a negative number if a should be arranged before b
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((a, b) -> b - a);
         // add/push
         pq.add(2);
         pq.add(3);
@@ -26,6 +27,13 @@ public class PriorityQueueExample {
         // remove(o)
         pq.removeIf(x -> x % 2 == 0);
         printPq(pq);
+
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.sort((a, b) -> b - a);
+        printArray(arr);
     }
 
     public static void printPq(PriorityQueue<Integer> pq) {
@@ -38,4 +46,11 @@ public class PriorityQueueExample {
         System.out.println();
     }
 
+    public static void printArray(ArrayList<Integer> arr) {
+        System.out.println();
+        for (Integer x : arr) {
+            System.out.println(x);
+        }
+        System.out.println();
+    }
 }
