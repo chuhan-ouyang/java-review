@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class TreeMapExample {
+import java.util.*;
+import java.io.*;
+
+public class TreeMapExample {
+    public static void main(String[] args) {
+
+    }
 }
